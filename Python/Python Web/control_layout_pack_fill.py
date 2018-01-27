@@ -1,0 +1,11 @@
+import tkinter as tk
+w = tk.Tk()
+b1 = tk.Button(w, text="button 1", bg="red")
+b2 = tk.Button(w, text="button 1", bg="blue")
+b3 = tk.Button(w, text="button 1", bg="green")
+b4 = tk.Button(w, text="button 1", bg="green")
+b1.pack()
+b2.pack(fill=tk.X)
+b3.pack(fill=tk.Y, side=tk.LEFT)
+b4.pack(fill=tk.Y, side=tk.RIGHT)
+w.mainloop()

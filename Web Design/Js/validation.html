@@ -1,0 +1,439 @@
+<html>
+<head>
+<title>Profile</title>
+<script language="javascript">
+function fun()
+{
+if(document.form1.userid.value=="")
+{
+alert("Please enter your Userid");
+document.form1.userid.focus();
+return false;
+}
+for(var i=0;i<document.form1.userid.value.length;i++)
+{
+var ch=document.form1.userid.value.substring(i,i+1);
+if((ch>="A" && ch<="Z") || (ch>="a" && ch<="z") || (ch==' ') || (ch=='.') || (ch=='-'))
+{
+continue;
+}
+else
+{
+alert("Please make sure your userid contains alphabets only");
+document.form1.userid.focus();
+return false;
+}
+}
+
+
+if(document.form1.name.value=="")
+{
+alert("Please enter your First Name");
+document.form1.name.focus();
+return false;
+}
+for(var i=0;i<document.form1.name.value.length;i++)
+{
+var ch=document.form1.name.value.substring(i,i+1);
+if((ch>="A" && ch<="Z") || (ch>="a" && ch<="z") || (ch=='') || (ch=='.') || (ch=='-'))
+{
+continue;
+}
+else
+{
+alert("Please make sure your name contains alphabets only");
+document.form1.name.focus();
+return false;
+}}
+
+
+
+
+
+if(document.form1.lastname.value=="")
+{
+alert("Please enter your Last Name");
+document.form1.lastname.focus();
+return false;
+}
+
+for(var i=0;i<document.form1.lastname.value.length;i++)
+{
+var ch=document.form1.lastname.value.substring(i,i+1);
+if((ch>="A" && ch<="Z") || (ch>="a" && ch<="z") || (ch=='') || (ch=='.') || (ch=='-'))
+{
+continue;
+}
+else
+{
+alert("Please make sure your lastname contains alphabets only");
+document.form1.lastname.focus();
+return false;
+}
+}
+
+
+
+
+
+if(document.form1.password.value=="")
+{
+alert("Password Cannot be left blank");
+document.form1.password.focus();
+return false;
+}
+else if(document.form1.password.value.length<5 || document.form1.password.value.length>15)
+{
+alert("Min:5 chars; Max:15 chars");
+document.form1.password.focus();
+return false;
+}
+
+
+
+
+
+
+if(document.form1.cfmconfirm.value=="")
+{
+alert("Confirm Password Cannot be left blank");
+document.form1.cfmconfirm.focus();
+return false;
+}
+else if(document.form1.password.value != document.form1.cfmconfirm.value)
+{
+alert("Password do not match");
+document.form1.cfmconfirm.focus();
+return false;
+}
+
+
+if(document.form1.date.value=="0")
+{
+alert("Please enter your Date of Birth");
+document.form1.date.focus();
+return false;
+}
+if(document.form1.month.value=="0")
+{
+alert("Please enter your Month");
+document.form1.month.focus();
+return false;
+}
+if(document.form1.year.value=="0")
+{
+alert("Please enter your Year");
+document.form1.year.focus();
+return false;
+}
+
+
+if(document.form1.address.value=="")
+{
+alert("Please enter your Address");
+document.form1.address.focus();
+return false;
+}
+
+
+
+if(document.form1.phone.value=="")
+{
+alert("Please enter your Phone Number");
+document.form1.phone.focus();
+return false;
+}
+
+if(document.form1.email.value=="")
+{
+alert("Please enter your Email");
+document.form1.email.focus();
+return false;
+}
+var at="@"
+var dot="."
+var lat=document.form1.email.value.indexOf(at)
+var lstr=document.form1.email.value.length
+var ldot=document.form1.email.value.indexOf(dot)
+if(document.form1.email.value.indexOf(at)=="-1")
+{
+alert("Please enter a proper email address\neg. abc@aditya.com");
+document.form1.email.focus();
+return false;
+}
+if(document.form1.email.value.indexOf(at)==-1 || document.form1.email.value.indexOf(at)==0 || document.form1.email.value.indexOf(at)==lstr)
+{
+alert("Please enter a proper email address\neg. abc@priyanka.com");
+document.form1.email.focus();
+return false;
+}
+if(document.form1.email.value.indexOf(dot)==-1 || document.form1.email.value.indexOf(dot)==0 || document.form1.email.value.indexOf(dot)==lstr)
+{
+alert("Please enter a proper email address\neg. abc@shireen.com");
+document.form1.email.focus();
+return false;
+}
+if(document.form1.email.value.indexOf(at,(lat+1))!=-1)
+{
+alert("Please enter a proper email address\neg. abc@atul.com");
+document.form1.email.focus();
+return false;
+}
+if(document.form1.email.value.substring(lat-1,lat)==dot || document.form1.email.value.substring(lat+1,lat+2)==dot)
+{
+alert("Please enter a proper email address\neg. abc@csII.com");
+document.form1.email.focus();
+return false;
+}
+if(document.form1.email.value.indexOf(dot,(lat+2))==-1)
+{
+alert("Please enter a proper email address\neg. abc@ritik.com");
+document.form1.email.focus();
+return false;
+}
+if(document.form1.email.value.indexOf(" ")!=-1)
+{
+alert("Please enter a proper email address\neg. abc@manisha.com.");
+document.form1.email.focus();
+return false;
+}
+
+
+}
+
+function numeralsOnly(evt)
+{
+evt=(evt)?evt:event;
+var charCode=(evt.charCode)?evt.charCode:((evt.keyCode)?evt.keyCode:((evt.which)?evt.which:0));
+if(charCode>=31 && (charCode<48 || charCode>57))
+{
+alert("Enter only numeric values\nThat is between 0-9\n in this fiesd.");
+return false;
+}
+return true;
+}
+</script>
+</head>
+<body>
+<form name="form1" method="POST" action=""  onsubmit="return fun();">
+<marquee bgcolor="#0000FF" width="1500" height="39" scrollamount="30" style="text-shadow:3px 3px yellow; font-family:Monotype Corsiva; font-size:24pt; color:#FF0000; text-transform:uppercase; text-decoration:blink; font-weight:bold;" >
+Create Your Profile</marquee>
+</p>
+<div align="center">
+<center>
+<table border="1" cellspacing="1" style="border-collapse:collapse; border:3px solid #0000FF" bordercolor="#111111" width="65%" id="AutoNumber1">
+<tr>
+<td width="36%" style="border-style:double; border-width:3; bordercolor:#0000FF">
+Write Your UserID*
+</td>
+<td width="64%" style="border-style:double; border-width:3; bordercolor:#0000FF">&nbsp;
+<input type="text" name="userid" size="20"/>
+</td>
+</tr>
+<tr>
+<td width="36%" style="border-style:double; border-width:3; bordercolor:#0000FF">
+First Name*
+</td>
+<td width="64%" style="border-style:double; border-width:3; bordercolor:#0000FF">&nbsp;
+<input type="text" name="name" size="20"/>
+</td>
+</tr>
+<tr>
+<td width="36%" style="border-style:double; border-width:3; bordercolor:#0000FF">
+Last Name*
+</td>
+<td width="64%" style="border-style:double; border-width:3; bordercolor:#0000FF">&nbsp;
+<input type="text" name="lastname" size="20"/>
+</td>
+</tr>
+<tr>
+<td width="36%" style="border-style:double; border-width:3; bordercolor:#0000FF">
+Password*
+</td>
+<td width="64%" style="border-style:double; border-width:3; bordercolor:#0000FF">&nbsp;
+<input type="password" name="password" size="20"/>
+</td>
+</tr>
+<tr>
+<td width="36%" style="border-style:double; border-width:3; bordercolor:#0000FF">
+Confirm Password*
+</td><br/>
+<td width="64%" style="border-style:double; border-width:3; bordercolor:#0000FF">&nbsp;
+<input type="password" name="cfmconfirm" size="20"/>
+</td>
+</tr>
+<tr>
+<td width="36%" style="border-style:double; border-width:3; bordercolor:#0000FF">
+D O B*
+</td>
+<td width="64%" style="border-style:double; border-width:3; bordercolor:#0000FF">&nbsp;
+DD<select size="1" name="date">
+<option selected value="0">Date</option>
+<option VALUE="1">1</option>
+<option VALUE="2">2</option>
+<option VALUE="3">3</option>
+<option VALUE="4">4</option>
+<option VALUE="5">5</option>
+<option VALUE="6">6</option>
+<option VALUE="7">7</option>
+<option VALUE="8">8</option>
+<option VALUE="9">9</option>
+<option VALUE="10">10</option>
+<option VALUE="11">11</option>
+<option VALUE="12">12</option>
+<option VALUE="13">13</option>
+<option VALUE="14">14</option>
+<option VALUE="15">15</option>
+<option VALUE="16">16</option>
+<option VALUE="17">17</option>
+<option VALUE="18">18</option>
+<option VALUE="19">19</option>
+<option VALUE="20">20</option>
+<option VALUE="21">21</option>
+<option VALUE="22">22</option>
+<option VALUE="23">23</option>
+<option VALUE="24">24</option>
+<option VALUE="25">25</option>
+<option VALUE="26">26</option>
+<option VALUE="27">27</option>
+<option VALUE="28">28</option>
+<option VALUE="29">29</option>
+<option VALUE="30">30</option>
+<option VALUE="31">31</option>
+</select>
+MM<select size="1" name="month"> 
+<option selected value="0">Month</option>
+<option VALUE="January">January
+<option VALUE="February">February
+<option VALUE="March">March
+<option VALUE="April">April
+<option VALUE="May">May
+<option VALUE="June">June
+<option VALUE="Julay">Julay
+<option VALUE="August">August
+<option VALUE="September">September
+<option VALUE="October">October
+<option VALUE="November">November
+<option VALUE="December">December
+</select>
+</select>
+YY<select size="1" name="year"> 
+<option selected value="0">Year</option>
+<option>1960</option>
+<option>1961</option>
+<option>1962</option>
+<option>1963</option>
+<option>1964</option>
+<option>1965</option>
+<option>1966</option>
+<option>1967</option>
+<option>1968</option>
+<option>1969</option>
+<option>1970</option>
+<option>1971</option>
+<option>1972</option>
+<option>1973</option>
+<option>1974</option>
+<option>1975</option>
+<option>1976</option>
+<option>1977</option>
+<option>1978</option>
+<option>1979</option>
+<option>1980</option>
+<option>1981</option>
+<option>1982</option>
+<option>1983</option>
+<option>1984</option>
+<option>1985</option>
+<option>1986</option>
+<option>1987</option>
+<option>1988</option>
+<option>1989</option>
+<option>1990</option>
+<option>1991</option>
+<option>1992</option>
+<option>1993</option>
+<option>1994</option>
+<option>1995</option>
+<option>1996</option>
+<option>1997</option>
+<option>1998</option>
+<option>1999</option>
+<option>2000</option>
+<option>2001</option>
+<option>2002</option>
+<option>2003</option>
+<option>2004</option>
+<option>2005</option>
+<option>2006</option>
+<option>2007</option>
+<option>2008</option>
+<option>2009</option>
+<option>2010</option>
+<option>2011</option>
+<option>2012</option>
+<option>2013</option>
+<option>2014</option>
+<option>2015</option>
+<option>2016</option>
+<option>2017</option>
+<option>2018</option>
+<option>2019</option>
+<option>2020</option>
+<option>2021</option>
+<option>2022</option>
+<option>2023</option>
+<option>2024</option>
+<option>2025</option>
+<option>2026</option>
+<option>2027</option>
+<option>2028</option>
+<option>2029</option>
+<option>2030</option>
+</select>
+</td>
+</tr>
+<tr>
+<td width="36%" style="border-style:double; border-width:3; bordercolor:#0000FF">
+Sex*
+</td>
+<td width="64%" style="border-style:double; border-width:3; bordercolor:#0000FF">&nbsp;
+<label><input type="radio" value="male" name="sex" size="20"checked selected />Male</label>
+<label><input type="radio" value="female" name="sex" size="20"/>Female</label>
+</td>
+</tr>
+<tr>
+<td width="36%" style="border-style:double; border-width:3; bordercolor:#0000FF">
+Address*
+</td><br/>
+<td width="64%" style="border-style:double; border-width:3; bordercolor:#0000FF">&nbsp;
+<textarea rows="2" cols="20" name="address" placeholder="Write your Address:"/></textarea>
+</td>
+</tr>
+<tr>
+<td width="36%" style="border-style:double; border-width:3; bordercolor:#0000FF">
+Phone No.*
+</td>
+<td width="64%" style="border-style:double; border-width:3; bordercolor:#0000FF">&nbsp;
+<input type="text" name="phone" size="20" onKeyPress="return numeralsOnly(event)">
+</td>
+</tr>
+<tr>
+<td width="36%" style="border-style:double; border-width:3; bordercolor:#0000FF">
+E-mail ID*
+</td>
+<td width="64%" style="border-style:double; border-width:3; bordercolor:#0000FF">&nbsp;
+<input type="email" name="email" size="20"/>
+</td>
+</tr>
+</table>
+</center>
+</div>
+<center>
+<input type="submit" name="B1" value="Next"/>&nbsp;&nbsp;&nbsp;&nbsp;
+<input type="reset" name="B2" value="Reset"/>
+</center>
+</p>
+</form>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<html>
+
+<head>
+<title>function</title>
+</head>
+
+<body>
+
+<script type="text/javascript">
+function fun(f1){
+var a,b,c;
+a=parseInt(f1.first.value)
+b=parseInt(f1.second.value)
+c=parseInt(f1.thirde.value)
+if(a>b&&a>c){
+f1.result.value="First value is greatest"
+}
+if(b>a&&b>c){
+f1.result.value="Second value is greatest"
+}
+if(c>b&&c>a){
+f1.result.value="Thirde value is greatest"
+}
+}
+
+</script>
+<form name="sp">
+<input type="text" name="first" placeholder="Enter First Value*"/><br/>
+<input type="text" name="second" placeholder="Enter Second Value*"/><br/>
+<input type="text" name="thirde" placeholder="Enter Thirde Value*"/><br/><br/>
+<input type="button" name="b1" value="Get Result" onclick="fun(sp);"/>
+<input type="reset" name="b2" value="Reset"/>
+<input type="text" name="result" placeholder="Your Result*"/>
+</form>
+</body>
+
+</html>
