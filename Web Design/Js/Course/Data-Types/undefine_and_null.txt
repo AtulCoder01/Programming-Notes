@@ -1,0 +1,6 @@
+Undefine and Null:~
+	* The absence of a meaningful value
+	* is an accident of Javascript's design
+
+** Undefine:-  handeled by JavaScript
+** and Null:- handeled by user defined

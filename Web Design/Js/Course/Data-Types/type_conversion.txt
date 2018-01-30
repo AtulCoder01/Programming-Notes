@@ -1,0 +1,65 @@
+* javascript is dynamic language
+
+Example:
+	var x = "Hello world"
+	typeof x ; //"string"
+	
+	x = 12;
+	typeof x ; // "number"
+
+	x = false;
+	typeof x ; // "boolean"
+
+	console.log(10 * null) // answer=0; // null treate as zero
+	console.log("50" + 10)// answer=5010; 
+	console.log("50" * 10) // answer =500;// because "50" is treates as a number 
+	console.log("50" - 10) // asswer = 40;  
+	console.log("50" / 10) // answer = 5;
+	console.log(false == null) // false
+***************************************************************************************************************
+
+ Convert Number to String:~
+---------------------------
+*****************************
+* num = num.toString();     *
+* num = String(num);        *
+*****************************
+
+Example:
+	var num =200;
+	typeof(num.toString()); // "string"
+	typeof(num); // "number"
+	
+	num = typeof(num.toString()) // "string"
+	typeof(num); // "string"
+
+	var x = 20;
+	typeof(String(x)); // "string"
+	typeof x ; // "number"
+
+	x = typeof(String(x))// "string"
+	typeof x ; // "string"
+********************************************************************************************
+ Convert String to Number:
+--------------------------
+
+**************************************************************
+* str = Number(str) 					      *
+* num = +str						      *
+* parseInt(str)        					      *
+* parseInt(str, 10) 					      *
+// 10 means decimal other used i.e.- octal(8),hexadecimal(16) *	         
+***************************************************************
+
+Example:
+-------
+	var str = "1234"
+	typeof(Number(str)) // "number"
+	typeof(str) // "string"
+ 
+	typeof(+str) // "number"	
+ 	
+
+	parseInt(str) // "number"
+	parseInt(str, 10) // number
+	parseInt(str, 8) // "number"

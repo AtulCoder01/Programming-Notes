@@ -1,0 +1,29 @@
+# 16 bit unicode characters
+
+	"This is Char"
+	'This is Char'
+Example:~
+	var x = "Hello Worlds"
+	x //print "Hello worlds"
+
+Immuable:~
+--------
+	means if same, value of two diffrent variables then point to onre variable
+
+
+Function:
+	* length
+	* charAt
+	* concat
+	* indexOf
+	* search
+	* lastIndexOf
+	* trim
+
+Example:~
+
+	 var str = "This is beautiful days"
+	 var x = 'days'
+	 str.indexOf(x) //print 18
+	 str.search(x) //print 18
+	 str.charAt(5) // print "i"

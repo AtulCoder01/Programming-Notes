@@ -1,0 +1,26 @@
+* Single line comment:
+	// x = 10
+	// console.log(x)
+
+* Double line comment:
+	/*
+	console.log(12.5 + 20)
+	console.log(4 + 20)
+	console.log(125 + 20)  
+		*/
+				
+Comment & Expression:~
+---------------------
+
+	12
+	"greeting"
+	True
+	Junuary 1, 2017
+
+Statement:~
+----------
+		A group of word, numbers and operators that performs a specific task is a statement.
+
+Expression:~
+-----------
+		An expression is any referance to a variable or value , or a set of variable(s) and value(s) combined with operator.

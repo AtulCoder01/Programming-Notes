@@ -1,0 +1,46 @@
+deff:~
+------
+	Javascript is the language of web.
+or
+	javascript is a lightweight, interpreted, objected language with first class function and is best know as the scripting language for web page, but it's used in many non-browser enviroments.
+
+
+Lightweight:~ 
+------------
+		* Small memory footprint
+		* Easy to learn
+		* Quick to execute
+
+Interpreted:~
+------------ 
+		* Executes line-by-line
+		* JIT - Just in Time Compilation
+******************************************************************************************************************************************
+
+ Interpreted				Compiled
+ -----------				--------
+ * Execute without Compilation		* Compilation step that converts code into machine understandable (or similar) format
+ * Execute lint-by-line			* Compilation step check for error in the program (mostly syntax)
+ * Does not know what next line has	* Code executes ofter compilation
+
+******************************************************************************************************************************************
+
+Object-oriented:~
+----------------
+		* Everything is object
+		* Data modeled around object
+
+First class function:~
+---------------------
+			* Function are object
+			* Can be passed as params
+
+Scripting language:~
+-------------------
+			* Name itself suggests 
+			* Interpreter scripting language behavior
+
+Non-Bowser enviroment:~
+----------------------
+			* Javascript can rin is Node
+			* Other enviroments that uses js engine

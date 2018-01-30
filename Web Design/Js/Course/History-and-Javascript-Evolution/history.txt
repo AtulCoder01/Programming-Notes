@@ -1,0 +1,4 @@
+Creaters:~
+	Brendon Eich (1995)
+
+# java script create for Metscape Navigator

@@ -1,0 +1,37 @@
+typeof():~ is tell which type of data
+
+Example:
+	var x = 10;
+	var y = "hello"
+	typeof x // print "number"
+	typeof y // print "string"
+*****************************************************************************************************************************************
+
+### Number data type is contains (int, float, double) , but treate as double (64 bit)
+ 
+Example:
+	var a = "xyz"
+	var b = 10
+	a * b  // print "NaN"
+	c = a * b
+	typeof c // print "Number"
+	 ## ( Nan == NaN) is return False
+
+
+* Number.MAX_VALUE
+* Number.MIN_VALUE
+
+Example:-
+-------
+	var x = 60
+	x  // print 60
+BUT
+	var x = 060
+	x  // print 48
+why:
+	if you write number started 0 , treats the octal number
+
+	var x = 090
+	x //print 90
+	
+Because 090 is not octal
