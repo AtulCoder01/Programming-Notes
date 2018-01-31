@@ -1,0 +1,9 @@
+ Example:~
+	var obj = {
+	city : "kanpur",
+	age : 26
+	};
+	obj.newobj = {sport : "WKF", team : "India"};
+	console.log["obj"]
+	console.log(obj.newobj.team) // print.... "India"
+	console.log(obj["newobj"]["team"])

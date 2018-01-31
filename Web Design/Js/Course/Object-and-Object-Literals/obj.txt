@@ -1,0 +1,33 @@
+ Object:~
+---------
+		An object is a collection of related data and/or functionality.
+	(which usually consists of several variables and function - whichare called 
+	properties and methods when they are inside objects)
+
+ How to Creaate Object:-
+ ----------------------
+ Example:~
+	var obj = {}; //create object but no variable and methode assign
+	obj
+	typeof(obj) // "object"
+
+ Example:~
+	var myClassobj = {};
+	myClassobj.title = "Hello World" ;  // assign variable in object
+	myClassobj
+	console.log(myClassobj)  // "Hello World"
+
+ Example:~
+	var person = {};
+	person
+	person.name = "Atul Kuamr	"
+	person.age = 25
+	person.hobby = "Hacking"
+	person.greet = function(name){
+		console.log("Hello, " +name) }// assign method
+	
+	console.log(person);
+	person.name;
+	person.age;
+	person.greet
+	person.greet("brother")

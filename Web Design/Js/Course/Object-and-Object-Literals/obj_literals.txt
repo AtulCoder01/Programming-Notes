@@ -1,0 +1,32 @@
+ Example:~
+	var person = {
+	name : "atul Kumar",  // assign variable inside object
+	age : 22,
+	hobby : "Hacking",
+	greet : function(name){
+	console.log("Hello,"+name);
+			}}
+	console.log(person.name, person.age, person.hobby);
+	person.greet("Atul"); // access object
+	person.city = "kanpur"; // assign variable outside object
+	console.log(person.city);
+*********************************************************************************
+
+ Example:~
+	var obj = {country : "India"};
+	obj.country  // "India"
+	obj["country"] // "India"
+	obj["city"] = "kanpur"; // access object use "[]"
+	obj
+	obj["city"]
+
+Why use:
+--------
+	
+ Example:~
+	var person = {
+	contry : "India"
+	0 : "Some Value"};
+	console.log(person)
+	console.log(person.0) // given error not access
+	console.log(person["0"])// print   "Some Text"
